@@ -37,4 +37,4 @@ While the ideal case can lead to a nice, clean separation of concerns, inevitabl
 [MIT](https://github.com/zhangist/react-koa-boilerplate/blob/master/LICENSE)
 
 ### Reference
-[react-isomorphic-boilerplate](https://github.com/chikara-chan/react-isomorphic-boilerplate/blob/master/LICENSE)
+[react-isomorphic-boilerplate](https://github.com/chikara-chan/react-isomorphic-boilerplate)
