@@ -1,9 +1,9 @@
 # React Koa Boilerplate
 
-An universal React and Koa(v2) isomorphic boilerplate.
+An universal React(v16) and Koa(v2) isomorphic boilerplate.
 
 ### Technology Stack
-- [React](https://github.com/facebook/react)
+- [React(v16)](https://github.com/facebook/react)
 - [React Router(v4)](https://github.com/ReactTraining/react-router)
 - [Redux](https://github.com/reactjs/redux)
 - [Stylus](https://github.com/stylus/stylus)
@@ -17,10 +17,12 @@ An universal React and Koa(v2) isomorphic boilerplate.
 
 ### Getting Started
 - Require Node.js v7.6 or later.
+- `npm install pm2 -g` to install pm2 global for production.
 - `npm install` to install dependencies and devDependencies.
 - `npm run dev` to start up the development environment.
 - `npm run build` to compile and bundle the client and server files.
 - `npm start` to deploy the production server.
+- `npm run prd` to deploy the production server with pm2.
 
 ### Why Isomorphic
 #### SEO
@@ -38,3 +40,7 @@ While the ideal case can lead to a nice, clean separation of concerns, inevitabl
 
 ### Reference
 [react-isomorphic-boilerplate](https://github.com/chikara-chan/react-isomorphic-boilerplate)
+
+### Change logs
+- Update react to v16.
+- Directory structure change.

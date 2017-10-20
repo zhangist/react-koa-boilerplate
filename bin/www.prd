@@ -1,0 +1,5 @@
+// set node env
+process.env.NODE_ENV = 'production';
+
+require('../config/app.prd');
+require('../dist/server/server');

@@ -1,0 +1,5 @@
+// set node env
+process.env.NODE_ENV = 'development';
+
+require('../config/app.dev');
+require('../src/server/server.dev');
