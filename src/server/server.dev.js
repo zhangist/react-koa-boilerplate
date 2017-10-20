@@ -40,7 +40,7 @@ const router = require('./routes');
 const clientRoute = require('./middlewares/clientRoute');
 const config = require('../../config/webpack.config.dev');
 
-const port = process.env.port;
+const port = process.env.PORT;
 const compiler = webpack(config);
 
 // Webpack hook event to write html file into `/src/client` from `/src/client` due to server render
