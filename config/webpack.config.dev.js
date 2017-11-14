@@ -66,7 +66,7 @@ module.exports = {
       loader: 'html-loader?minimize=false',
     }],
   },
-  resolve: { extensions: ['.js', '.jsx', '.json', '.less'] },
+  resolve: { extensions: ['.js', '.jsx', '.json', '.styl'] },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
@@ -78,6 +78,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: '../client/index.html',
       template: './src/client/index.tpl.html',
+      favicon: path.resolve(__dirname, '../src/client/favicon.ico'),
     }),
     new ExtractTextPlugin({ filename: '[name].css', allChunks: true }),
     new ProgressBarPlugin({ summary: false }),

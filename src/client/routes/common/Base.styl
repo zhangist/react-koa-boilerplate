@@ -1,0 +1,188 @@
+/*
+The ".sl-" prefix mean this is site level and belong to shulive css lib.
+The ".p-" prefix mean this is page level class name.Avoid global conflicts.
+*/
+
+/* float */
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+/* button */
+.sl-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.sl-button.icon {
+  font-size: 16px;
+}
+
+/* link */
+.sl-link {
+  color: #28c;
+  text-decoration: none;
+}
+.sl-link:hover {
+  color: #06a;
+  text-decoration: underline;
+}
+
+/* input */
+.sl-input {
+  width: 100%;
+  height: 32px;
+  position: relative;
+}
+.sl-input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  font-size: 14px;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.sl-input input[type="submit"],
+.sl-input input[type="button"] {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: #ac1;
+}
+.sl-input input[type="submit"]:hover,
+.sl-input input[type="button"]:hover {
+  background: #9b0;
+}
+.sl-input input:focus {
+  border: 1px solid #2af;
+}
+.sl-input.sl-input-icon input {
+  padding-left: 32px;
+}
+.sl-input .icon {
+  width: 16px;
+  height: 16px;
+  color: #999;
+  font-size: 16px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.sl-input .sl-input-hint {
+  color: red;
+  font-size: 12px;
+  line-height: 16px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+}
+
+/* module */
+.sl-module {
+  margin-bottom: 10px;
+  /*box-shadow: 0 1px 3px rgba(0,37,55,.05);*/
+  /*box-shadow: 3px 3px 0 rgba(0,37,55,.03);*/
+  box-sizing: border-box;
+  background: #fff;
+}
+.sl-module.sl-module-shadow {
+  box-shadow: 3px 3px 0 rgba(0,0,0,.03);
+}
+.sl-module-title {
+  height: 48px;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 48px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.sl-module-title.sl-module-blue {
+  color: #fff;
+  background: #2af;
+  border-bottom: none;
+}
+.sl-module-title.sl-module-center {
+  padding-left: 0;
+  text-align: center;
+}
+
+/* maskbox */
+.sl-maskbox {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+}
+.sl-maskbox-close-btn {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  color: #ccc;
+  background: #000;
+  float: right;
+}
+.sl-maskbox-close-btn.sl-maskbox-left {
+  float: left;
+}
+.sl-maskbox-close-btn.sl-maskbox-right {
+  float: right;
+}
+.sl-maskbox-close-btn:hover {
+  color: #fff;
+  background: #333;
+}
+.sl-maskbox-links {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.sl-maskbox-link {
+  height: 48px;
+  padding: 0 16px;
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+}
+.sl-maskbox-link.sl-maskbox-active,
+.sl-maskbox-link:hover {
+  color: #fff;
+}
+.sl-maskbox-link .icon {
+  margin: 0 4px 0 0;
+  font-size: 16px;
+}

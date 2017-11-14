@@ -1,7 +1,9 @@
 import Router from 'koa-router';
-import api from './api';
+import apiSite from './api/site';
+import apiUser from './api/user';
 
 const router = new Router();
-router.use(api.routes(), router.allowedMethods());
+router.use(apiSite.routes(), apiSite.allowedMethods());
+router.use(apiUser.routes(), apiUser.allowedMethods());
 
 export default router;

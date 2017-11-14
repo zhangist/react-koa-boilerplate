@@ -1,8 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import { persistStore, autoRehydrate } from 'redux-persist';
 import rootReducer from '../reducers';
-import DevTools from '../containers/common/DevTools';
+import DevTools from '../routes/common/DevTools';
 
 export default function configureStore(preloadedState) {
   const store = createStore(
@@ -10,7 +9,6 @@ export default function configureStore(preloadedState) {
     preloadedState,
     compose(
       applyMiddleware(thunk),
-      autoRehydrate(),
       DevTools.instrument(),
     ),
   );
@@ -22,8 +20,6 @@ export default function configureStore(preloadedState) {
       store.replaceReducer(nextRootReducer);
     });
   }
-
-  persistStore(store);
 
   return store;
 }

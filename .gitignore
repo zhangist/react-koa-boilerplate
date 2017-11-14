@@ -2,3 +2,5 @@ node_modules
 dist
 config/app.dev.js
 config/app.prd.js
+/upload
+/src/client/index.html

@@ -10,7 +10,7 @@ import createHistory from 'history/createBrowserHistory';
 import configureStore from './store/configureStore';
 import routes from './routes';
 
-const store = configureStore(window.REDUX_STATE); // eslint-disable-line no-undef
+const store = configureStore(global.window.REDUX_STATE); // eslint-disable-line no-undef
 const history = createHistory();
 
 hydrate(

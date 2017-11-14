@@ -5,6 +5,12 @@ const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const copyFile = [
+  { from: 'src/client/favicon.ico', to: 'favicon.ico' },
+  { from: 'src/client/assets', to: 'assets' },
+];
 
 function getExternals() {
   return fs.readdirSync(path.resolve(__dirname, '../node_modules'))
@@ -74,7 +80,7 @@ const clientConfig = {
       loader: 'html-loader?minimize=false',
     }],
   },
-  resolve: { extensions: ['.js', '.jsx', '.json', '.less'] },
+  resolve: { extensions: ['.js', '.jsx', '.json', '.styl'] },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest'],
@@ -90,8 +96,10 @@ const clientConfig = {
       filename: '../client/index.html',
       template: './src/client/index.tpl.html',
       chunksSortMode: 'dependency',
+      favicon: path.resolve(__dirname, '../src/client/favicon.ico'),
     }),
     new ExtractTextPlugin({ filename: '[name].[contenthash:8].css', allChunks: true }),
+    new CopyWebpackPlugin(copyFile),
   ],
 };
 
@@ -144,13 +152,15 @@ const serverConfig = {
     }],
   },
   externals: getExternals(),
-  resolve: { extensions: ['.js', '.jsx', '.json', '.less'] },
+  resolve: { extensions: ['.js', '.jsx', '.json', '.styl'] },
   plugins: [
     // new webpack.optimize.UglifyJsPlugin({
     //   compress: { warnings: false },
     //   comments: false,
     // }),
-    new MinifyPlugin({}), // for es6 minify
+    new MinifyPlugin({
+      keepFnName: true, // set true for server ('TypeError: l is not a function')
+    }), // for es6 minify
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) }),
     new ExtractTextPlugin({ filename: '[name].[contenthash:8].css', allChunks: true }),
   ],
