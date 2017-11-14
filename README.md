@@ -2,7 +2,7 @@
 
 An universal React(v16) and Koa(v2) isomorphic boilerplate.
 
-Hint: This boilerplate is used by Shulive Box.
+Hint: This boilerplate is used by Shulive Box.  
 Hint: Some of the built-in fonts and logos are copyright owned by Shulive Box, please replace them when using the boilerplate.
 
 ### Getting Started
