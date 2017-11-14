@@ -3,7 +3,7 @@
 An universal React(v16) and Koa(v2) isomorphic boilerplate.
 
 Hint: This boilerplate is used by Shulive Box.  
-Hint: Some of the built-in fonts and logos are copyright owned by Shulive Box, please replace them when using the boilerplate.
+Hint: Some of the built-in fonts and logos are copyright owned by Shulive Box, please replace them when using this boilerplate.
 
 ### Getting Started
 - Require Node.js v7.6 or later.
